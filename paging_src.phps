@@ -2,6 +2,7 @@
 <?php
 include("connect.php");
 $block_per_page=3;  // 너무 많이 주면... 문제가 됨. 버튼링크 갯수. 설정값대로 뿌려줌.. 10개로 설정하면. 1~10 
+//초기엔 적게 잡고 글이 늘어날수록 조금씩 숫자 늘리는것이 안정적인 운영의 답
 $page_per_record=5;   
 @$page=$_REQUEST['page']; // 어쩔수 없음..따지기 잘하기 증세 생기면 방법이 없음. @붙이는 수밖에.. $_GET으로 해도... No답
 if( !intval($page) || $page == false || $page == null)  { $page=1; }
