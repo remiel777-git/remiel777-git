@@ -3,7 +3,7 @@
 include("connect.php");
 $block_per_page=3;  // 너무 많이 주면... 문제가 됨. 버튼링크 갯수. 설정값대로 뿌려줌.. 10개로 설정하면. 1~10 
 $page_per_record=5;   
-@$page=$_REQUEST['page'];
+@$page=$_REQUEST['page']; // 어쩔수 없음..따지기 잘하기 증세 생기면 방법이 없음. @붙이는 수밖에.. $_GET으로 해도... No답
 if( !intval($page) || $page == false || $page == null)  { $page=1; }
 else {	$page=preg_replace('#[^0-9]#','',$_REQUEST['page']);}  $_GET 대신 $_REQUEST. 문자열 거의 불능[포기가 빠름. 되는 경우가 이해가 안갈정도로 힘듬] 
 
