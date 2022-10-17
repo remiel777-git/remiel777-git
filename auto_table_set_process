@@ -1,0 +1,33 @@
+== auto check table  / run . disable. active . blind
+
+login write on APM server s/w not install.
+
+
+
+
+table_set <- sql table 
+in 
+num /code/ action
+1 / settup / disable
+2 / free / active
+3 / user_name / blind
+- or disable , blind  => disable or blind or other tag [_______]
+
+
+$sql = "select * from table_set where 1";
+$link =mysqli_connect($conn,$sql)
+while($act=mysqli_fetch_assoc($link)) {
+$data_code=stripslashes($act['code']);
+$data_action=stripslahses($act['action']);
+if($data_action="disable" || "blind") { echo "Not usage data";} else{} // diet line
+//if up line not active -> if($data_action="disable" || $data_action"blind") { echo "Not usage data";} else{} // diet line
+elseif($data_action="active"){ "enable" // limit. and add with. ~.php?tbl=$tbl}
+else {}
+
+and other use exam. $sql = "select * from table_set where code like 'free'" limit 1"; 
+.
+.
+
+on web ~.php?tbl=free 
+
+read on how means what's source type code.
