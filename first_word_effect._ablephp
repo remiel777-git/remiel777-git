@@ -1,0 +1,15 @@
+ <?php
+
+$string="hello string by php source example";
+
+$split=explode(" ", $string);
+
+$explode_string=$split[0]; 여기에 echo문으로 해줘도 나오던걸로 .. 그러나 좀더 보강 Lock을 위해 아랫 구문 두줄더.
+
+$str_count=mb_strlen($explode_string,"UTF-8");
+
+$print_str=mb_substr($string, 0, $str_count, 'utf-8');
+
+?>
+
+9번라인으로 끝날수도 있지만... 웬지 느낌상.... 1번더 한게 낳을듯한 나만의 느낌.? 
