@@ -1,0 +1,27 @@
+$sql="select * from rand_data";
+
+$result=mysqli_query($connect,$sql);
+
+$total=mysqli_num_rows($result);
+
+$rand=rand(1,$total);
+
+$rand_src="select * from rand_data where rand_number like $rand limit 1";
+
+$rand_code=mysqli_query($connect,$rand_src);
+
+while($rander=mysqli_fetch_assoc($rand_code)) {
+
+	$rand_string=stripslashes($rander['rand_string']);
+
+	$rand_value=stripslashes($rander['rand_value']);
+
+	}
+
+	echo $rand_string; 
+
+	echo $rand_value; 
+  
+  둘중에 아무거나. 시리얼 코드 설정하고.. 나머지 하나는 실제 시리얼 코드에 대입되는 단어/문장..
+  
+  이해도 : 모바일 게임내 앱의 쿠폰제 / 탈퇴의 탈퇴 단어 입력제  이런 류. 
